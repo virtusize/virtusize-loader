@@ -1,7 +1,7 @@
 {
   "name": "virtusize-loader",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/virtusize-loader.min.js",
   "license": "MIT",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"

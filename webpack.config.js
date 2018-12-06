@@ -57,11 +57,12 @@ if (process.env.NODE_ENV === 'production') {
   config = [
     merge(productionConfig,
     {
-      entry: path.resolve(__dirname + '/src/plugin.js'),
+      entry: path.resolve(__dirname + '/src/index.js'),
       output: {
         filename: 'virtusize-loader.min.js',
-        libraryTarget: 'window',
-        library: 'VSLoader'
+        libraryTarget: 'umd',
+        library: 'VSLoader',
+        umdNamedDefine: true
       }
     })
   ]
