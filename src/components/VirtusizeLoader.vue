@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="vs-loader">
+    <div class="vs-loader" v-if="visible">
       <div class="squeezer">
         <div class="vbottom"></div>
         <div class="vtop"></div>
@@ -21,11 +21,14 @@ export default {
       required: true
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
 .vs-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   animation: none;
   background: #fafafa;
   border: 0;
